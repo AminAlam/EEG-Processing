@@ -12,13 +12,11 @@ sig2 = chirp(time,100,1,400,'quadratic');
 
 plot(time, sig, 'linewidth', 1)
 xlabel('Time (s)'); ylabel('Signal')
-title('Generated Chirp Signal')
-
+title('Generated Chirp Signal in Time Domain')
 %% making different windows for fourirer analysis
 L = 128;
 rectWin = rectwin(L); triangWin = triang(L); gaussWin = gausswin(L); hammingWin = hamming(L);
 wvtool(rectWin, triangWin, gaussWin, hammingWin)
-
 %% Effect of different windows on Spectogram
 noverlap = 0; nfft = L;
 
@@ -37,9 +35,7 @@ title('Gauss Window')
 subplot(2,2,4)
 spectrogram(sig, hammingWin, noverlap, nfft, fs);
 title('Hamming Window')
-
 %% Effect of number of overlap samples on spectogram
-
 noverlap = 0;
 subplot(4,4,[1,2,5,6])
 spectrogram(sig, rectWin, noverlap, nfft, fs);
@@ -54,7 +50,6 @@ noverlap = 127;
 subplot(4,4,[10,11,14,15])
 spectrogram(sig, rectWin, noverlap, nfft, fs);
 title('Rect Window - noverlap = 127')
-
 %% Effect of window length on spectogram
 clc
 L = 32; noverlap = L-1; nfft=L;
@@ -71,9 +66,7 @@ L = 512; noverlap = 127; nfft=L;
 subplot(4,4,[10,11,14,15])
 spectrogram(sig, rectWin, noverlap, nfft, fs);
 title('Rect Window | L = 512 |noverlap = 127')
-
 %% Effect of number of fft points of spectogram
-
 L = 128; noverlap = L/2; nfft=L;
 subplot(4,4,[1,2,5,6])
 spectrogram(sig, rectWin, noverlap, nfft, fs);

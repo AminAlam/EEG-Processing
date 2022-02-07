@@ -1,11 +1,9 @@
 % loading sample data
 clc
 clear
-load('NewEEGSignal.mat');
+load('datas/NewEEGSignal.mat');
 fs_256 = 256;
-
 %% showing the signal in time domain and time-frequency domain
-
 % Tima Domain
 sigg = NewEEGSignal;
 time = (1:length(sigg))/fs_256;
@@ -21,7 +19,6 @@ L = 16;
 stft(sigg,fs_256,'Window',kaiser(L,5),'OverlapLength',L/2,'FFTLength',2*L);
 ylim([0,100])
 title('STFT of the signal')
-
 %% lowpass filtering the signal [64Hz]
 clc
 fs_128 = 128;
@@ -36,16 +33,8 @@ xlabel('Time (s)')
 ylabel('Signal')
 title('Signal in the Time Domain')
 
-
 % STFT
 figure
 L = 16;
 stft(sigg,fs_128,'Window',kaiser(L,5),'OverlapLength',L/2,'FFTLength',2*L);
 ylim([0,64])
-
-
-
-
-
-
-
