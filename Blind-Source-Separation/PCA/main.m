@@ -26,11 +26,10 @@ plot3([0,coeff(1,1)], [0,coeff(2,1)], [0,coeff(3,1)],'->', 'LineWidth',3)
 plot3([0,coeff(1,2)], [0,coeff(2,2)], [0,coeff(3,2)],'->', 'LineWidth',3)
 plot3([0,coeff(1,3)], [0,coeff(2,3)], [0,coeff(3,3)],'->', 'LineWidth',3)
 legend('Sample Data', 'First Coefficient', 'Second Coefficient', 'Third Coefficient')
-
 xlabel('x')
 ylabel('y')
 zlabel('z')
-%% Whittening data using PCA
+%% Whitening data using PCA
 clc
 close all
 X = data.X;
@@ -47,7 +46,7 @@ figure
 scatter3(X(1,:), X(2,:), X(3,:))
 hold on
 scatter3(data_white(1,:), data_white(2,:), data_white(3,:))
-legend('Sample Data', 'Whittened Data')
+legend('Sample Data', 'Whitened Data')
 
 xlabel('x')
 ylabel('y')
@@ -64,8 +63,6 @@ plotEEG(X, Electrodes)
 title('Original Signal')
 
 % Adding noise to the data
-clc
-
 Noise = data.X_noise_1;
 X = data.X_org;
 Ps = sum(X.^2,'all');
@@ -77,7 +74,7 @@ X_noisy = X + sigma*Noise;
 figure
 plotEEG(X_noisy, Electrodes)
 title("Noisy Signal")
-
+%% Calculating PCA components of the signal
 [coeff_pca, scores_pca, K_pca] = pca(X_noisy');
 figure
 plotEEG(scores_pca', Electrodes)

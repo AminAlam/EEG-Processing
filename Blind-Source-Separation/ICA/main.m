@@ -18,6 +18,9 @@ clc
 figure
 plotEEG(W*X_noisy, Electrodes)
 title("Components of ICA")
+
+set(gcf,'PaperPositionMode','auto')
+print("data_EEG_ICAcomps",'-dpng','-r0')
 %% Denoising Signal by ICA
 clc
 Z=pinv(F)*X_noisy;
@@ -28,3 +31,6 @@ X_den_ica = F*Z;
 figure
 plotEEG(X_den_ica, Electrodes)
 title("Denoised signal using ICA")
+
+set(gcf,'PaperPositionMode','auto')
+print("denoised_data_EEG_ICAcomps",'-dpng','-r0')
