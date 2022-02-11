@@ -10,13 +10,15 @@ Common spatial pattern (CSP) is a mathematical procedure used in signal processi
 
 I have applied CSP to the data and plotted the results in the following images.
 
+Before CSP:
+
 <p align="center">
-<p>Before CSP:</p>
 <img src="https://user-images.githubusercontent.com/50844047/153436073-17065cee-d8d4-48ad-859f-28d481e256e2.png" width="50%">
 </p>
 
+After CSP:
+
 <p align="center">
-<p>After CSP:</p>
 <img src="https://user-images.githubusercontent.com/50844047/153435979-e5144915-69b8-4cd3-9b21-df4297d55b37.png" width="50%">
 </p>
 
