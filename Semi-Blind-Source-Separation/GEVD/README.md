@@ -5,7 +5,7 @@ I used an artifical EEG datas which is a triangular wave with additive noise. Th
 <img src="https://user-images.githubusercontent.com/50844047/153651005-5c261249-c1d4-4ed6-bb15-ca8fc1767c04.png" width="50%">
 </p>
 
-### Extracting Sources using DSS
+### Extracting Sources using GEVD
 
 I extracted the main sources using GEVD (time period of the signals is used for calculating covariance matrix). You can see the extracted sources and main sources in the following images.
 
