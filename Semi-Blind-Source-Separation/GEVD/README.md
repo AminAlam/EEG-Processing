@@ -16,6 +16,5 @@ Main Sources:
 
 Extracted Sources:
 <p align="center">
-<img src="https://user-images.githubusercontent.com/50844047/153651117-a717190d-905c-4e97-a5cc-e66d03b0a631.png" width="50%">
+<img src="https://user-images.githubusercontent.com/50844047/153651986-c75f9ff6-2862-4c6f-a5d5-18871e79fb58.png" width="50%">
 </p>
-
